@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Diffusion Chatbot</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="wrap">
+
+<h1>Diffusion Chatbot (Pixel AI)</h1>
+
+<div id="chat"></div>
+
+<input id="msg" placeholder="Typ bericht..." />
+<button onclick="sendMessage()">Send</button>
+
+<hr/>
+
+<h2>Training data</h2>
+
+<textarea id="q" placeholder="question"></textarea>
+<textarea id="a" placeholder="answer"></textarea>
+<button onclick="addData()">Add pair</button>
+<button onclick="train()">Train model</button>
+
+<p id="status">Not trained</p>
+
+<hr/>
+
+<h2>Canvas input</h2>
+<canvas id="c" width="256" height="256"></canvas>
+<canvas id="c2" width="256" height="256"></canvas>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
